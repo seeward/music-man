@@ -954,21 +954,21 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 function initGame () {
     tiles.setTilemap(tiles.createTilemap(
-            hex`1000100001020302020202030202030203130204050000000000000000000000000000111200000000000000000000000000000c060000000000002600000000000000110600000000000023000000000000000c0600000000000023232327000000000c060000000000000000000000000000111200000000000000000000000000000b0600000000000000000000000000000b0600000000000000000000000000000c1200260000000000000000000000000c060023000000000000000000000000110500280000000000000000000000000b120000000000000000000000000000110600000000000000000000000000000b09100a0a1007070a1007070a100a0714`,
+            hex`1000100001020302020202030202030203130204050000000000000000000000000000111200000000000000000000200000000c060000000000002600000020000000110600202020000023000000000000000c0600200000000023232327000000000c060020000000000000000000000000111200000000000000000000000000000b0600000000200000000000000000000b0600000000202020202000000000000c1200260000000000000000000026000c060023000000000000000000002200110500280000232323232323000028000b120000000000000000000000000000110600000000000000000000000000000b09100a0a1007070a1007070a100a0714`,
             img`
 2 2 2 2 2 2 2 2 2 2 2 2 2 . 2 2 
 2 . . . . . . . . . . . . . . 2 
-2 . . . . . . . . . . . . . . 2 
-2 . . . . . . 2 . . . . . . . 2 
-2 . . . . . . 2 . . . . . . . 2 
-2 . . . . . . 2 2 2 2 . . . . 2 
-2 . . . . . . . . . . . . . . 2 
-2 . . . . . . . . . . . . . . 2 
-2 . . . . . . . . . . . . . . 2 
-2 . . . . . . . . . . . . . . 2 
+2 . . . . . . . . . . 2 . . . 2 
+2 . . . . . . 2 . . . 2 . . . 2 
+2 . 2 2 2 . . 2 . . . . . . . 2 
+2 . 2 . . . . 2 2 2 2 . . . . 2 
 2 . 2 . . . . . . . . . . . . 2 
-2 . 2 . . . . . . . . . . . . 2 
-2 . 2 . . . . . . . . . . . . 2 
+2 . . . . . . . . . . . . . . 2 
+2 . . . . 2 . . . . . . . . . 2 
+2 . . . . 2 2 2 2 2 . . . . . 2 
+2 . 2 . . . . . . . . . . 2 . 2 
+2 . 2 . . . . . . . . . . 2 . 2 
+2 . 2 . . 2 2 2 2 2 2 . . 2 . 2 
 2 . . . . . . . . . . . . . . 2 
 2 . . . . . . . . . . . . . . 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
@@ -1004,6 +1004,7 @@ f e e f f e e e 4 e e f e
 . . . b e e . . b e e . . 
 . . . f f f . . f f f . . 
 `, SpriteKind.Player)
+    seeward.setPosition(25, 35)
     scene.cameraFollowSprite(seeward)
     playIdleRightAnimation()
     controller.moveSprite(seeward)
@@ -1048,59 +1049,6 @@ function addGuitar () {
 . . . . . . . . . . . . . . . . . 
 `, SpriteKind.guitar)
     guitar2.setPosition(Math.randomRange(0, 180), Math.randomRange(0, 140))
-    guitar3 = sprites.create(img`
-. . . . . . f f f f f f . . . . . . . 
-. . . . . f e e e e e e f . . . . . . 
-. . . . f . e 4 e e 4 e . f . . . . . 
-. . . . f . e 4 e e 4 e . f . . . . . 
-. . . . f f e e e e e e f f . . . . . 
-. . . . f . e 5 e e 5 e . f . . . . . 
-. . . . f f e e e e e e f f . . . . . 
-. . . . . f f e e e e f f . . . . . . 
-. . . . . . b e c c e b . . . . . . . 
-. . . . . . b c c c c b . . . . . . . 
-. . . . . . b c c c c b . . . . . . . 
-. . . . . . b c c c c b . . . . . . . 
-. . . . . . b c c c c b . . . . . . . 
-. . . . . . b c e c c b . . . . . . . 
-. . . . . . b c 4 4 c b . . . . . . . 
-. . . . . . b c c c c b . . . . . . . 
-. . . . . . b c c c c b . . . . . . . 
-. . . . . . b c c c c b . . . . . . . 
-. . . . . . b c e e c b . . . . . . . 
-. . . . . . b c 4 4 c b . . . . . . . 
-. . . . . . b c c c c b . . . . . . . 
-. . . . . . b c c c c b . . . . . . . 
-. . . . . . b c c c c b . . . . . . . 
-. . . . . . b c c e c b . . . . . . . 
-. . . . . . b c 4 4 c b . . . . . . . 
-. . . . . . b c c c c b . . . . . . . 
-. . . . . . b c c c c b . . . . . . . 
-. . f f f f c c c c c c f f f f . . . 
-. . f e e e f c c c c f e e e f . . . 
-. . f e e e e c c c c e e e e f . . . 
-. . f e e e e e e e e e e e e f . . . 
-. . f f f e e e e e e e e f f f . . . 
-. . . . f e e 4 4 4 4 e e f . . . . . 
-. . . f f e e 4 5 5 5 e e f f . . . . 
-. . f e e e e 5 5 5 5 e e e e f d . . 
-. f e e e f e e e e e e f e e e f . . 
-f e e f e e e e e e e e e c f e e f . 
-f e e f e e e 4 4 4 4 e e e f e e f . 
-f e e f c e e 5 5 5 5 e e e f e e e f 
-f e f e e e e 5 5 5 5 e e e e f e e f 
-f e e e e e e e e e e e e e e e e e f 
-f e e e e e e e e e e e e e e f e e f 
-f e e e e e e 4 4 4 4 e f e e f e e f 
-f e e e e e e 5 5 5 5 e f e e e e e f 
-f e e e e e e e e e e e e e e f e f . 
-f e e e e e e e e e e e e e e e e f . 
-f f e e e e e e e e e e e e e e f f . 
-. f f f e e e e e e e e e e f f f . . 
-. . . . f e e e e e e e e f . . . . . 
-. . . . . f f f f f f f f . . . . . . 
-`, SpriteKind.guitar)
-    guitar3.setPosition(Math.randomRange(0, 180), Math.randomRange(0, 140))
 }
 function playIdleRightAnimation () {
     animation.runImageAnimation(
@@ -1180,9 +1128,9 @@ f e e f f e e e 4 e e f e
 . 4 . c c c c c c c . 4 . 
 . 4 . c c c c c c c . 4 . 
 . . . c c c . c c c . . . 
-. . . . 4 4 . . 4 4 . . . 
-. . . e e b . . b e e . . 
-. . . f f f . . f f f . . 
+. . . . 4 4 . . b e e . . 
+. . . e e b . . f f f . . 
+. . . f f f . . . . . . . 
 `,img`
 . . . e f f e f e e . . . 
 . . e f e e f e e f e . . 
@@ -1283,6 +1231,136 @@ f e e f f e e e 4 e e f e
 . 4 . e e e e e e e . 4 . 
 . 4 . c c c c c c c . 4 . 
 . . . c c c c c c c . 4 . 
+. . . c c c . c c c . . . 
+. . . . 4 4 . . 4 4 . . . 
+. . . e e b . . b e e . . 
+. . . f f f . . f f f . . 
+`,img`
+. . . . . . . . . . . . . 
+. . . e f f e f e e . . . 
+. . e f e e f e e f e . . 
+. f f e f f f e f e f e . 
+e f e e f e e f e e f e . 
+f e e f f e e e 4 e e f e 
+. f f e e 4 4 4 4 4 e e e 
+. e e 4 4 4 4 4 4 4 4 e . 
+. f f f f f f 4 4 f f f f 
+. 4 f 4 f 4 e f f e 4 f . 
+. . e 4 f f f 4 4 f f f . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . . 4 4 4 e 4 4 4 . . 
+. e e e 4 4 4 4 4 4 e e . 
+. e . e e e 4 4 4 e . e . 
+. e . e e e e e e e . e . 
+. 4 . e e e e e e e . 4 . 
+. 4 . e e e e e e e . 4 . 
+. 4 . c c c c c c c . 4 . 
+. 4 . c c c c c c c . . . 
+. . . c c c . c c c . . . 
+. . . . 4 4 . . 4 4 . . . 
+. . . e e b . . b e e . . 
+. . . f f f . . f f f . . 
+`,img`
+. . . . . . . . . . . . . 
+. . . e f f e f e e . . . 
+. . e f e e f e e f e . . 
+. f f e f f f e f e f e . 
+e f e e f e e f e e f e . 
+f e e f f e e e 4 e e f e 
+. f f e e 4 4 4 4 4 e e e 
+. e e 4 4 4 4 4 4 4 4 e . 
+. f f f f f f 4 4 f f f f 
+. 4 f 4 f 4 e f f e 4 f . 
+. . e 4 f f f 4 4 f f f . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . . 4 4 4 e 4 4 4 . . 
+. e e e 4 4 4 4 4 4 e e . 
+. e . e e e 4 4 4 e . e . 
+. e . e e e e e e e . e . 
+. 4 . e e e e e e e . 4 . 
+. 4 . e e e e e e e . 4 . 
+. 4 . c c c c c c c . 4 . 
+. 4 . c c c c c c c . . . 
+. . . c c c . c c c . . . 
+. . . . 4 4 . . 4 4 . . . 
+. . . e e b . . b e e . . 
+. . . f f f . . f f f . . 
+`,img`
+. . . . . . . . . . . . . 
+. . . e f f e f e e . . . 
+. . e f e e f e e f e . . 
+. f f e f f f e f e f e . 
+e f e e f e e f e e f e . 
+f e e f f e e e 4 e e f e 
+. f f e e 4 4 4 4 4 e e e 
+. e e 4 4 4 4 4 4 4 4 e . 
+. f f f f f f 4 4 f f f f 
+. 4 f 4 f 4 e f f e 4 f . 
+. . e 4 f f f 4 4 f f f . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . . 4 4 4 e 4 4 4 . . 
+. e e e 4 4 4 4 4 4 e e . 
+. e . e e e 4 4 4 e . e . 
+. e . e e e e e e e . e . 
+. 4 . e e e e e e e . 4 . 
+. 4 . e e e e e e e . 4 . 
+. 4 . c c c c c c c . 4 . 
+. 4 . c c c c c c c . . . 
+. . . c c c . c c c . . . 
+. . . . 4 4 . . 4 4 . . . 
+. . . e e b . . b e e . . 
+. . . f f f . . f f f . . 
+`,img`
+. . . . . . . . . . . . . 
+. . . e f f e f e e . . . 
+. . e f e e f e e f e . . 
+. f f e f f f e f e f e . 
+e f e e f e e f e e f e . 
+f e e f f e e e 4 e e f e 
+. f f e e 4 4 4 4 4 e e e 
+. e e 4 4 4 4 4 4 4 4 e . 
+. f f f f f f 4 4 f f f f 
+. 4 f 4 f 4 e f f e 4 f . 
+. . e 4 f f f 4 4 f f f . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . . 4 4 4 e 4 4 4 . . 
+. e e e 4 4 4 4 4 4 e e . 
+. e . e e e 4 4 4 e . e . 
+. e . e e e e e e e . e . 
+. 4 . e e e e e e e . 4 . 
+. 4 . e e e e e e e . 4 . 
+. 4 . c c c c c c c . 4 . 
+. 4 . c c c c c c c . . . 
+. . . c c c . c c c . . . 
+. . . . 4 4 . . 4 4 . . . 
+. . . e e b . . b e e . . 
+. . . f f f . . f f f . . 
+`,img`
+. . . . . . . . . . . . . 
+. . . e f f e f e e . . . 
+. . e f e e f e e f e . . 
+. f f e f f f e f e f e . 
+e f e e f e e f e e f e . 
+f e e f f e e e 4 e e f e 
+. f f e e 4 4 4 4 4 e e e 
+. e e 4 4 4 4 4 4 4 4 e . 
+. f f f f f f 4 4 f f f f 
+. 4 f 4 f 4 e f f e 4 f . 
+. . e 4 f f f 4 4 f f f . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . . 4 4 4 e 4 4 4 . . 
+. e e e 4 4 4 4 4 4 e e . 
+. e . e e e 4 4 4 e . e . 
+. e . e e e e e e e . e . 
+. 4 . e e e e e e e . 4 . 
+. 4 . e e e e e e e . 4 . 
+. 4 . c c c c c c c . 4 . 
+. 4 . c c c c c c c . . . 
 . . . c c c . c c c . . . 
 . . . . 4 4 . . 4 4 . . . 
 . . . e e b . . b e e . . 
@@ -1399,9 +1477,9 @@ function playWalkLeftAnimation () {
 . 4 . c c c c c c c . 4 . 
 4 4 . c c c c c c c 4 4 . 
 . . . c c c . c c c . . . 
-. . 4 4 . . e e b . . . . 
-. e e b . . f f f . . . . 
-. f f f . . . . . . . . . 
+. . . 4 4 . . 4 4 . . . . 
+. . e e b . e e b . . . . 
+. . f f f . f f f . . . . 
 `,img`
 . . . . . . . . . . . . . 
 . . . e f f e f e e . . . 
@@ -1424,10 +1502,10 @@ function playWalkLeftAnimation () {
 . 4 . e e e e e e e . 4 . 
 4 4 . c c c c c c c . 4 . 
 . . . c c c c c c c . 4 . 
-. . . c c c . c c c 4 4 . 
-. . . 4 4 . . . 4 4 . . . 
-. . e e b . . e e b . . . 
-. . f f f . . f f f . . . 
+. . . c c c . 4 4 c 4 4 . 
+. . . 4 4 . e e b . . . . 
+. . e e b . f f f . . . . 
+. . f f f . . . . . . . . 
 `,img`
 . . . . . . . . . . . . . 
 . . . e f f e f e e . . . 
@@ -1459,7 +1537,6 @@ function playWalkLeftAnimation () {
     true
     )
 }
-let guitar3: Sprite = null
 let guitar2: Sprite = null
 let seeward: Sprite = null
 initGame()
