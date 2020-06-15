@@ -328,6 +328,268 @@ f e e f f e e e e e e f e
     true
     )
 }
+function playWalkRightAnimation2 () {
+    animation.runImageAnimation(
+    seeward,
+    [img`
+. . . e f f e f e e . . . 
+. . e f e e f e e f e . . 
+. f f e f f f e f e f e . 
+e f e e f e e f e e f e . 
+f e e f f e e e 4 e e f e 
+. f f e e 4 4 4 4 4 e e e 
+. e e 4 4 4 4 4 4 4 4 e . 
+. f f f f f f 4 4 f f f f 
+. 4 f 4 f 4 e f f e 4 f . 
+. . e 4 f f f 4 4 f f f . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . . 4 4 4 e 4 4 4 . . 
+. . . . 4 4 4 4 4 4 . . . 
+. e e e e e 4 4 4 e e e . 
+. e . e e e e e e e . e . 
+. e . e e e e e e e . e . 
+. 4 . e e e e e e e . 4 . 
+. 4 . e e e e e e e . 4 . 
+. 4 . c c c c c c c . 4 4 
+. 4 . c c c c c c c . . . 
+. 4 4 c c c . c c 4 4 . . 
+. . . 4 4 . . . . b e e . 
+. . . b e e . . . f f f . 
+. . . f f f . . . . . . . 
+`,img`
+. . . . . . . . . . . . . 
+. . . e f f e f e e . . . 
+. . e f e e f e e f e . . 
+. f f e f f f e f e f e . 
+e f e e f e e f e e f e . 
+f e e f f e e e 4 e e f e 
+. f f e e 4 4 4 4 4 e e e 
+. e e 4 4 4 4 4 4 4 4 e . 
+. f f f f f f 4 4 f f f f 
+. 4 f 4 f 4 e f f e 4 f . 
+. . e 4 f f f 4 4 f f f . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . . 4 4 4 e 4 4 4 . . 
+. e e e 4 4 4 4 4 4 e e . 
+. e . e e e 4 4 4 e . e . 
+. e . e e e e e e e . e . 
+. 4 . e e e e e e e . 4 . 
+. 4 . e e e e e e e . 4 . 
+. 4 . c c c c c c c . 4 . 
+. 4 4 c c c c c c c . 4 4 
+. . . c c c . c c c . . . 
+. . . . b e e . . 4 4 . . 
+. . . . f f f . . b e e . 
+. . . . . . . . . f f f . 
+`,img`
+. . . . . . . . . . . . . 
+. . . e f f e f e e . . . 
+. . e f e e f e e f e . . 
+. f f e f f f e f e f e . 
+e f e e f e e f e e f e . 
+f e e f f e e e 4 e e f e 
+. f f e e 4 4 4 4 4 e e e 
+. e e 4 4 4 4 4 4 4 4 e . 
+. f f f f f f 4 4 f f f f 
+. 4 f 4 f 4 e f f e 4 f . 
+. . e 4 f f f 4 4 f f f . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . . 4 4 4 e 4 4 4 . . 
+. e e e 4 4 4 4 4 4 e e . 
+. e . e e e 4 4 4 e . e . 
+. e . e e e e e e e . e . 
+. 4 . e e e e e e e . 4 . 
+. 4 . e e e e e e e . 4 . 
+. 4 4 c c c c c c c . 4 . 
+. . . c c c c c c c . 4 . 
+. . . c c c . c c c . 4 4 
+. . . 4 4 . . . 4 4 . . . 
+. . . b e e . . b e e . . 
+. . . f f f . . f f f . . 
+`,img`
+. . . . . . . . . . . . . 
+. . . e f f e f e e . . . 
+. . e f e e f e e f e . . 
+. f f e f f f e f e f e . 
+e f e e f e e f e e f e . 
+f e e f f e e e 4 e e f e 
+. f f e e 4 4 4 4 4 e e e 
+. e e 4 4 4 4 4 4 4 4 e . 
+. f f f f f f 4 4 f f f f 
+. 4 f 4 f 4 e f f e 4 f . 
+. . e 4 f f f 4 4 f f f . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . . 4 4 4 e 4 4 4 . . 
+. e e e 4 4 4 4 4 4 e e . 
+. e . e e e 4 4 4 e . e . 
+. e . e e e e e e e . e . 
+. 4 . e e e e e e e . 4 . 
+. 4 . e e e e e e e . 4 . 
+. 4 . c c c c c c c . 4 4 
+. 4 4 c c c c c c c . . . 
+. . . c c c . c c c . . . 
+. . . . 4 4 . . 4 4 . . . 
+. . . . b e e . b e e . . 
+. . . . f f f . f f f . . 
+`],
+    75,
+    true
+    )
+}
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenSwitchUp, function (sprite, location) {
+    tiles.setTileAt(location, sprites.dungeon.greenSwitchDown)
+    game.splash("quick, find the guitar")
+    info.startCountdown(10)
+    addGuitar()
+})
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    playWalkLeftAnimation()
+})
+controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
+    playUpDownAnimation()
+})
+function playUpDownAnimation () {
+    animation.runImageAnimation(
+    seeward,
+    [img`
+. . . e f f e f e e . . . 
+. . e f e e f e e f e . . 
+. f f e f f f e f e f e . 
+e f e e f e e f e e f e . 
+f e e f f e e e 4 e e f e 
+. f f e e 4 4 4 4 4 e e e 
+. e e 4 4 4 4 4 4 4 4 e . 
+. f f f f f f 4 4 f f f f 
+. 4 f 4 f 4 e f f e 4 f . 
+. . e 4 f f f 4 4 f f f . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . . 4 4 4 e 4 4 4 . . 
+. . . . 4 4 4 4 4 4 . . . 
+. e e e e e 4 4 4 e e e . 
+. e . e e e e e e e . e . 
+. e . e e e e e e e . e . 
+. 4 . e e e e e e e . 4 . 
+. 4 . e e e e e e e . 4 . 
+. 4 . c c c c c c c . 4 . 
+. 4 . c c c c c c c . . . 
+. . . c c c . c c c . . . 
+. . . 4 4 . . . 4 4 . . . 
+. . . e e . . . e e . . . 
+. . . f f . . . f f . . . 
+`,img`
+. . . . . . . . . . . . . 
+. . . e f f e f e e . . . 
+. . e f e e f e e f e . . 
+. f f e f f f e f e f e . 
+e f e e f e e f e e f e . 
+f e e f f e e e 4 e e f e 
+. f f e e 4 4 4 4 4 e e e 
+. e e 4 4 4 4 4 4 4 4 e . 
+. f f f f f f 4 4 f f f f 
+. 4 f 4 f 4 e f f e 4 f . 
+. . e 4 f f f 4 4 f f f . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . . 4 4 4 e 4 4 4 . . 
+. e e e 4 4 4 4 4 4 e e . 
+. e . e e e 4 4 4 e . e . 
+. e . e e e e e e e . e . 
+. 4 . e e e e e e e . 4 . 
+. 4 . e e e e e e e . 4 . 
+. 4 . c c c c c c c . 4 . 
+. 4 . c c c c c c c . . . 
+. . . c c c . c c c . . . 
+. . . e e . . . 4 4 . . . 
+. . . f f . . . e e . . . 
+. . . . . . . . f f . . . 
+`,img`
+. . . . . . . . . . . . . 
+. . . e f f e f e e . . . 
+. . e f e e f e e f e . . 
+. f f e f f f e f e f e . 
+e f e e f e e f e e f e . 
+f e e f f e e e 4 e e f e 
+. f f e e 4 4 4 4 4 e e e 
+. e e 4 4 4 4 4 4 4 4 e . 
+. f f f f f f 4 4 f f f f 
+. 4 f 4 f 4 e f f e 4 f . 
+. . e 4 f f f 4 4 f f f . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . . 4 4 4 e 4 4 4 . . 
+. e e e 4 4 4 4 4 4 e e . 
+. e . e e e 4 4 4 e . e . 
+. e . e e e e e e e . e . 
+. 4 . e e e e e e e . 4 . 
+. 4 . e e e e e e e . 4 . 
+. 4 . c c c c c c c . 4 . 
+. 4 . c c c c c c c . . . 
+. . . c c c . c c c . . . 
+. . . 4 4 . . . e e . . . 
+. . . e e . . . f f . . . 
+. . . f f . . . . . . . . 
+`,img`
+. . . . . . . . . . . . . 
+. . . e f f e f e e . . . 
+. . e f e e f e e f e . . 
+. f f e f f f e f e f e . 
+e f e e f e e f e e f e . 
+f e e f f e e e 4 e e f e 
+. f f e e 4 4 4 4 4 e e e 
+. e e 4 4 4 4 4 4 4 4 e . 
+. f f f f f f 4 4 f f f f 
+. 4 f 4 f 4 e f f e 4 f . 
+. . e 4 f f f 4 4 f f f . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . . 4 4 4 e 4 4 4 . . 
+. e e e 4 4 4 4 4 4 e e . 
+. e . e e e 4 4 4 e . e . 
+. e . e e e e e e e . e . 
+. 4 . e e e e e e e . 4 . 
+. 4 . e e e e e e e . 4 . 
+. 4 . c c c c c c c . 4 . 
+. 4 . c c c c c c c . . . 
+. . . c c c . c c c . . . 
+. . . e e . . . 4 4 . . . 
+. . . f f . . . e e . . . 
+. . . . . . . . f f . . . 
+`,img`
+. . . . . . . . . . . . . 
+. . . e f f e f e e . . . 
+. . e f e e f e e f e . . 
+. f f e f f f e f e f e . 
+e f e e f e e f e e f e . 
+f e e f f e e e 4 e e f e 
+. f f e e 4 4 4 4 4 e e e 
+. e e 4 4 4 4 4 4 4 4 e . 
+. f f f f f f 4 4 f f f f 
+. 4 f 4 f 4 e f f e 4 f . 
+. . e 4 f f f 4 4 f f f . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . 4 4 4 4 4 e 4 4 . . 
+. . . . 4 4 4 e 4 4 4 . . 
+. e e e 4 4 4 4 4 4 e e . 
+. e . e e e 4 4 4 e . e . 
+. e . e e e e e e e . e . 
+. 4 . e e e e e e e . 4 . 
+. 4 . e e e e e e e . 4 . 
+. 4 . c c c c c c c . 4 . 
+. 4 . c c c c c c c . . . 
+. . . c c c . c c c . . . 
+. . . 4 4 . . . e e . . . 
+. . . e e . . . f f . . . 
+. . . f f . . . . . . . . 
+`],
+    100,
+    true
+    )
+}
 function playAttackAnimation () {
     animation.runImageAnimation(
     seeward,
@@ -382,58 +644,6 @@ f e e f f e e e 4 e e f e . . . . . . . . . . . .
 . . . c c b b b d b b . . . . . . . . . . . . . . 
 . . . . 4 b b b b d b . . . . . . . . . . . . . . 
 . . . e e 1 1 1 1 1 1 . . . . . . . . . . . . . . 
-. . . f f f . . f f f . . . . . . . . . . . . . . 
-`,img`
-. . . e f f e f e e . . . . . . . . . . . . . . . 
-. . e f e e f e e f e . . . . . . . . . . . . . . 
-. f f e f f f e f e f e . . . . . . . . . . . . . 
-e f e e f e e f e e f e . . . . . . . . . . . . . 
-f e e f f e e e 4 e e f e . . . . . . . . . . . . 
-. f f e e 4 4 4 4 4 e e e . . . . . . . . . . . . 
-. e e 4 4 4 4 4 4 4 4 e . . . . . . . . . . . . . 
-. f f f f f f 4 4 f f f f . . . . . . . . . . . . 
-. 4 f 4 f 4 e f f e 4 f . . . . . . . . . . . . . 
-. . e 4 f f f 4 4 f f f . . . . . . . . . . . . . 
-. . . 4 4 4 4 4 e 4 4 . . . . . . . . . . . . . . 
-. . . 4 4 4 4 4 e 4 4 . . . . . . . . . . . . . . 
-. . . . 4 4 4 e 4 4 4 . . . . . . . . . . . . . . 
-. . . . 4 4 4 4 4 4 . . . . . . . . . . . . . . . 
-. e e e e e 4 4 4 e e e . . . . . . . . . . . . . 
-. e . e e e e e e e . e . . . . . . . . . . . . . 
-. e . e e e e e e e . e . . . . . . . . . . . . . 
-. 4 . e e e e e e e . 4 . . . . . . . . . . . . . 
-. 4 . e e e e e e e . 4 . . . . . . . . . . . . . 
-. 4 . c c c c c c c . 4 . . . . . . . . . . . . . 
-. 4 e e e b b d b b b 4 . . . . . . . . . . . . . 
-. . . c c b b b d b b . . . . . . . . . . . . . . 
-. . . . 4 b b b b d b . . . . . . . . . . . . . . 
-. . . e e 1 1 1 1 1 1 . . . . . . . . . . . . . . 
-. . . f f f . . f f f . . . . . . . . . . . . . . 
-`,img`
-. . . . e f f e f e e . . . . . . . . . . . . . . 
-. . . e f e e f e e f e . . . . . . . . . . . . . 
-. . f f e f f f e f e f e . . . . . . . . . . . . 
-. e f e e f e e f e e f e . . . . . . . . . . . . 
-. f e e f f e e e 4 e e f e . . . . . . . . . . . 
-. . f f e e 4 4 4 4 4 e e e . . . . . . . . . . . 
-. . e e 4 4 4 4 4 4 4 4 e . . . . . . . . . . . . 
-. . f f f f f f 4 4 f f f f . . . . . . . . . . . 
-. . 4 f 4 f 4 e f f e 4 f . . . . . . . . . . . . 
-. . . e 4 f f f 4 4 f f f . . . . . . . . . . . . 
-. . . . 4 4 4 4 4 e 4 4 . . . . . . . . . . . . . 
-. . b b b 1 4 4 4 e 4 4 . . . . . . . . . . . . . 
-. . b b 1 1 4 4 e 4 4 4 . . . . . . . . . . . . . 
-. . b 1 b 1 4 4 4 4 4 . . . . . . . . . . . . . . 
-. e 1 b b 1 4 4 4 4 e e . . . . . . . . . . . . . 
-. e b b b 1 e e e e . e . . . . . . . . . . . . . 
-. e b b b 1 e e e e . e . . . . . . . . . . . . . 
-. 4 e e e e e e 4 4 4 4 . . . . . . . . . . . . . 
-. 4 e e e e e e e e . . . . . . . . . . . . . . . 
-. 4 e c c c c c c c . . . . . . . . . . . . . . . 
-. 4 4 c c c c c c c . . . . . . . . . . . . . . . 
-. . . c c c . c c c . . . . . . . . . . . . . . . 
-. . . . 4 4 . . 4 4 . . . . . . . . . . . . . . . 
-. . . e e b . . b e e . . . . . . . . . . . . . . 
 . . . f f f . . f f f . . . . . . . . . . . . . . 
 `,img`
 . . . . e f f e f e e . . . . . . . . . . . . . . 
@@ -724,268 +934,6 @@ f e e f f e e e 4 e e f e . . . . . . . . . . . .
 `],
     100,
     false
-    )
-}
-function playWalkRightAnimation2 () {
-    animation.runImageAnimation(
-    seeward,
-    [img`
-. . . e f f e f e e . . . 
-. . e f e e f e e f e . . 
-. f f e f f f e f e f e . 
-e f e e f e e f e e f e . 
-f e e f f e e e 4 e e f e 
-. f f e e 4 4 4 4 4 e e e 
-. e e 4 4 4 4 4 4 4 4 e . 
-. f f f f f f 4 4 f f f f 
-. 4 f 4 f 4 e f f e 4 f . 
-. . e 4 f f f 4 4 f f f . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . . 4 4 4 e 4 4 4 . . 
-. . . . 4 4 4 4 4 4 . . . 
-. e e e e e 4 4 4 e e e . 
-. e . e e e e e e e . e . 
-. e . e e e e e e e . e . 
-. 4 . e e e e e e e . 4 . 
-. 4 . e e e e e e e . 4 . 
-. 4 . c c c c c c c . 4 4 
-. 4 . c c c c c c c . . . 
-. 4 4 c c c . c c 4 4 . . 
-. . . 4 4 . . . . b e e . 
-. . . b e e . . . f f f . 
-. . . f f f . . . . . . . 
-`,img`
-. . . . . . . . . . . . . 
-. . . e f f e f e e . . . 
-. . e f e e f e e f e . . 
-. f f e f f f e f e f e . 
-e f e e f e e f e e f e . 
-f e e f f e e e 4 e e f e 
-. f f e e 4 4 4 4 4 e e e 
-. e e 4 4 4 4 4 4 4 4 e . 
-. f f f f f f 4 4 f f f f 
-. 4 f 4 f 4 e f f e 4 f . 
-. . e 4 f f f 4 4 f f f . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . . 4 4 4 e 4 4 4 . . 
-. e e e 4 4 4 4 4 4 e e . 
-. e . e e e 4 4 4 e . e . 
-. e . e e e e e e e . e . 
-. 4 . e e e e e e e . 4 . 
-. 4 . e e e e e e e . 4 . 
-. 4 . c c c c c c c . 4 . 
-. 4 4 c c c c c c c . 4 4 
-. . . c c c . c c c . . . 
-. . . . b e e . . 4 4 . . 
-. . . . f f f . . b e e . 
-. . . . . . . . . f f f . 
-`,img`
-. . . . . . . . . . . . . 
-. . . e f f e f e e . . . 
-. . e f e e f e e f e . . 
-. f f e f f f e f e f e . 
-e f e e f e e f e e f e . 
-f e e f f e e e 4 e e f e 
-. f f e e 4 4 4 4 4 e e e 
-. e e 4 4 4 4 4 4 4 4 e . 
-. f f f f f f 4 4 f f f f 
-. 4 f 4 f 4 e f f e 4 f . 
-. . e 4 f f f 4 4 f f f . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . . 4 4 4 e 4 4 4 . . 
-. e e e 4 4 4 4 4 4 e e . 
-. e . e e e 4 4 4 e . e . 
-. e . e e e e e e e . e . 
-. 4 . e e e e e e e . 4 . 
-. 4 . e e e e e e e . 4 . 
-. 4 4 c c c c c c c . 4 . 
-. . . c c c c c c c . 4 . 
-. . . c c c . c c c . 4 4 
-. . . 4 4 . . . 4 4 . . . 
-. . . b e e . . b e e . . 
-. . . f f f . . f f f . . 
-`,img`
-. . . . . . . . . . . . . 
-. . . e f f e f e e . . . 
-. . e f e e f e e f e . . 
-. f f e f f f e f e f e . 
-e f e e f e e f e e f e . 
-f e e f f e e e 4 e e f e 
-. f f e e 4 4 4 4 4 e e e 
-. e e 4 4 4 4 4 4 4 4 e . 
-. f f f f f f 4 4 f f f f 
-. 4 f 4 f 4 e f f e 4 f . 
-. . e 4 f f f 4 4 f f f . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . . 4 4 4 e 4 4 4 . . 
-. e e e 4 4 4 4 4 4 e e . 
-. e . e e e 4 4 4 e . e . 
-. e . e e e e e e e . e . 
-. 4 . e e e e e e e . 4 . 
-. 4 . e e e e e e e . 4 . 
-. 4 . c c c c c c c . 4 4 
-. 4 4 c c c c c c c . . . 
-. . . c c c . c c c . . . 
-. . . . 4 4 . . 4 4 . . . 
-. . . . b e e . b e e . . 
-. . . . f f f . f f f . . 
-`],
-    75,
-    true
-    )
-}
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenSwitchUp, function (sprite, location) {
-    tiles.setTileAt(location, sprites.dungeon.greenSwitchDown)
-    game.splash("quick, find the guitar")
-    info.startCountdown(10)
-    addGuitar()
-})
-controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    playWalkLeftAnimation()
-})
-controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
-    playUpDownAnimation()
-})
-function playUpDownAnimation () {
-    animation.runImageAnimation(
-    seeward,
-    [img`
-. . . e f f e f e e . . . 
-. . e f e e f e e f e . . 
-. f f e f f f e f e f e . 
-e f e e f e e f e e f e . 
-f e e f f e e e 4 e e f e 
-. f f e e 4 4 4 4 4 e e e 
-. e e 4 4 4 4 4 4 4 4 e . 
-. f f f f f f 4 4 f f f f 
-. 4 f 4 f 4 e f f e 4 f . 
-. . e 4 f f f 4 4 f f f . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . . 4 4 4 e 4 4 4 . . 
-. . . . 4 4 4 4 4 4 . . . 
-. e e e e e 4 4 4 e e e . 
-. e . e e e e e e e . e . 
-. e . e e e e e e e . e . 
-. 4 . e e e e e e e . 4 . 
-. 4 . e e e e e e e . 4 . 
-. 4 . c c c c c c c . 4 . 
-. 4 . c c c c c c c . . . 
-. . . c c c . c c c . . . 
-. . . 4 4 . . . 4 4 . . . 
-. . . e e . . . e e . . . 
-. . . f f . . . f f . . . 
-`,img`
-. . . . . . . . . . . . . 
-. . . e f f e f e e . . . 
-. . e f e e f e e f e . . 
-. f f e f f f e f e f e . 
-e f e e f e e f e e f e . 
-f e e f f e e e 4 e e f e 
-. f f e e 4 4 4 4 4 e e e 
-. e e 4 4 4 4 4 4 4 4 e . 
-. f f f f f f 4 4 f f f f 
-. 4 f 4 f 4 e f f e 4 f . 
-. . e 4 f f f 4 4 f f f . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . . 4 4 4 e 4 4 4 . . 
-. e e e 4 4 4 4 4 4 e e . 
-. e . e e e 4 4 4 e . e . 
-. e . e e e e e e e . e . 
-. 4 . e e e e e e e . 4 . 
-. 4 . e e e e e e e . 4 . 
-. 4 . c c c c c c c . 4 . 
-. 4 . c c c c c c c . . . 
-. . . c c c . c c c . . . 
-. . . e e . . . 4 4 . . . 
-. . . f f . . . e e . . . 
-. . . . . . . . f f . . . 
-`,img`
-. . . . . . . . . . . . . 
-. . . e f f e f e e . . . 
-. . e f e e f e e f e . . 
-. f f e f f f e f e f e . 
-e f e e f e e f e e f e . 
-f e e f f e e e 4 e e f e 
-. f f e e 4 4 4 4 4 e e e 
-. e e 4 4 4 4 4 4 4 4 e . 
-. f f f f f f 4 4 f f f f 
-. 4 f 4 f 4 e f f e 4 f . 
-. . e 4 f f f 4 4 f f f . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . . 4 4 4 e 4 4 4 . . 
-. e e e 4 4 4 4 4 4 e e . 
-. e . e e e 4 4 4 e . e . 
-. e . e e e e e e e . e . 
-. 4 . e e e e e e e . 4 . 
-. 4 . e e e e e e e . 4 . 
-. 4 . c c c c c c c . 4 . 
-. 4 . c c c c c c c . . . 
-. . . c c c . c c c . . . 
-. . . 4 4 . . . e e . . . 
-. . . e e . . . f f . . . 
-. . . f f . . . . . . . . 
-`,img`
-. . . . . . . . . . . . . 
-. . . e f f e f e e . . . 
-. . e f e e f e e f e . . 
-. f f e f f f e f e f e . 
-e f e e f e e f e e f e . 
-f e e f f e e e 4 e e f e 
-. f f e e 4 4 4 4 4 e e e 
-. e e 4 4 4 4 4 4 4 4 e . 
-. f f f f f f 4 4 f f f f 
-. 4 f 4 f 4 e f f e 4 f . 
-. . e 4 f f f 4 4 f f f . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . . 4 4 4 e 4 4 4 . . 
-. e e e 4 4 4 4 4 4 e e . 
-. e . e e e 4 4 4 e . e . 
-. e . e e e e e e e . e . 
-. 4 . e e e e e e e . 4 . 
-. 4 . e e e e e e e . 4 . 
-. 4 . c c c c c c c . 4 . 
-. 4 . c c c c c c c . . . 
-. . . c c c . c c c . . . 
-. . . e e . . . 4 4 . . . 
-. . . f f . . . e e . . . 
-. . . . . . . . f f . . . 
-`,img`
-. . . . . . . . . . . . . 
-. . . e f f e f e e . . . 
-. . e f e e f e e f e . . 
-. f f e f f f e f e f e . 
-e f e e f e e f e e f e . 
-f e e f f e e e 4 e e f e 
-. f f e e 4 4 4 4 4 e e e 
-. e e 4 4 4 4 4 4 4 4 e . 
-. f f f f f f 4 4 f f f f 
-. 4 f 4 f 4 e f f e 4 f . 
-. . e 4 f f f 4 4 f f f . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . 4 4 4 4 4 e 4 4 . . 
-. . . . 4 4 4 e 4 4 4 . . 
-. e e e 4 4 4 4 4 4 e e . 
-. e . e e e 4 4 4 e . e . 
-. e . e e e e e e e . e . 
-. 4 . e e e e e e e . 4 . 
-. 4 . e e e e e e e . 4 . 
-. 4 . c c c c c c c . 4 . 
-. 4 . c c c c c c c . . . 
-. . . c c c . c c c . . . 
-. . . 4 4 . . . e e . . . 
-. . . e e . . . f f . . . 
-. . . f f . . . . . . . . 
-`],
-    100,
-    true
     )
 }
 controller.left.onEvent(ControllerButtonEvent.Released, function () {
@@ -1514,69 +1462,4 @@ function playWalkLeftAnimation () {
 let guitar3: Sprite = null
 let guitar2: Sprite = null
 let seeward: Sprite = null
-let knife = sprites.create(img`
-b b b b b d 1 
-b b b b b d d 
-b b b b d d d 
-b b b d d d d 
-b b d d b d d 
-b d d b b d d 
-d d b b b d d 
-d b b b b d d 
-b b b b b d d 
-b b b b b d d 
-b b b b b d d 
-b b b b b d d 
-b b c . . . . 
-4 4 e . . . . 
-4 4 e . . . . 
-4 4 e . . . . 
-4 4 e . . . . 
-4 4 e . . . . 
-4 4 e . . . . 
-4 e e . . . . 
-`, SpriteKind.knife)
-let amp = sprites.create(img`
-f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
-f d d f f f f f f f f f f f f f f f f f f f f f f f f f f f f d d f 
-f d d f f f f f f f f f f f f f f f f f f f f f f f f f f f f d d f 
-f d d f f f f f d d f f f f f f f f f f f f f d d f f f f f f d d f 
-f f f f f f f f d e e e e e e e e e e e e e e e d f f f f f f f f f 
-f f f f f f f f d d f f f f f f f f f f f f f d d f f f f f f f f f 
-f f f f f f f f d d f f f f f f f f f f f f f d d f f f f f f f f f 
-f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
-f d d f f f f f f f f f f f f f f f f f f f f f f f f f f f f d d f 
-f d d f f f f f f f f f f f f f f f f f f f f f f f f f f f f d d f 
-f d d f f f f f f f f f f f f f f f f f f f f f f f f f f f f d d f 
-f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
-f d d b e e e e e e e e e e e e e e e e e e e e e e e e e e b d d f 
-f d d d e e e e e e e e e e e e e e e e e e e e e e e e e e d d d f 
-f f d d e e e e e e e e e e e e e e e e e e e e e e e e e e d d f f 
-f f d d e e d d e e d d e e d d e e b d e e e c e e 4 4 e e d d f f 
-f f d d e e d d e e b d e e b d e e d d e e e c e e 4 4 e e d d f f 
-f f d d e e e e e e e e e e e e e e e e e e e e e e e e e e d d f f 
-f f d b f f f f f f f f f f f f f f f f f f f f f f f f f f b d f f 
-f f d b f f f f f f f f f f f f f f f f f f f f f f f f f f b d f f 
-f f d b f f f f f f f f f f f f f f f f f f f f f f f f f f b d f f 
-f f d b f f f f f f f b b f f f f f f f f f f b f f f f f f b d f f 
-f f d b f f f f f f b d b f f f b d b f f f b d d f f f f f b d f f 
-f f d b f f f f f f b d b b b f b d b f f b b b b f f f f f b d f f 
-f f d b f f f f f f b d d d d d d d d d d d b f f f f f f f b d f f 
-f f d b f f f f f f b b d d b b b d b b b d b f f f f f f f b d f f 
-f f d b f f f f b d b f f f f f f f f f f f f f f f f f f f b d f f 
-f f d b f f f f b d f f f f f f f f f f f f f f f f f f f f b d f f 
-f f d b f f f f f f f f f f f f f f f f f f f f f f f f f f b d f f 
-f f d b f f f f f f f f f f f f f f f f f f f f f f f f f f b d f f 
-f f d b f f f f f f f f f f f f f f f f f f f f f f f f f f b d f f 
-f f d b f f f f f f f f f f f f f f f f f f f f f f f f f f b d f f 
-f f d b f f f f f f f f f f f f f f f f f f f f f f f f f f b d f f 
-f f d b f f f f f f f f f f f f f f f f f f f f f f f f f f b d f f 
-f f d b f f f f f f f f f f f f f f f f f f f f f f f f f f b d f f 
-f f d d b b b b b b b b b b b b b b b b b b b b b b b b b b d d f f 
-f f d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d f f 
-f d d b b b b b b b b b b b b b b b b b b b b b b b b b b b b d d f 
-f d d f f f f f f f f f f f f f f f f f f f f f f f f f f f f d d f 
-f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
-`, SpriteKind.Player)
-amp.setPosition(222, 220)
 initGame()
