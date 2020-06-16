@@ -1,5 +1,5 @@
 {
-    "name": "music man",
+    "name": "music man - v2",
     "dependencies": {
         "device": "*",
         "animation": "*",
